@@ -1,4 +1,5 @@
 from nicegui import ui, app
+import os
 from pages import home, about, services, gallery, testimonials, contact, faqs, footer
 
 # Serve static files from assets folder
@@ -14,4 +15,4 @@ ui.page('/contact')(contact.contact)
 ui.page('/faqs')(faqs.faqs)
 ui.page('/footer')(footer.footer)
 
-ui.run()
+ui.run(host="0.0.0.0",port=int(os.getenv("PORT",8080)))

@@ -15,4 +15,4 @@ ui.page('/contact')(contact.contact)
 ui.page('/faqs')(faqs.faqs)
 ui.page('/footer')(footer.footer)
 
-ui.run(host="0.0.0.0",port=int(os.getenv("PORT",8080)))
+ui.run()
